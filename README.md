@@ -3,15 +3,21 @@
 Projeto acadêmico da disciplina **Operating Systems / Sistemas
 Operacionais** --- FIAP, Global Solution 2026.2.
 
+Integrantes:
+
+Leonardo Luiz Jardim Queijo - RM 559842
+
+Kauã Rodrigues de Souza- RM 559335
+
+Felipe Santos Marceli -RM560456
+
+Enzo Galhardo - RM561001
+
+Kauan Diogo - RM560727
+
 O BRIDGE propõe uma infraestrutura Windows Server para apoiar a solução
 CitizenTech da equipe, com serviços de rede, identidade, hospedagem web,
 monitoramento e acompanhamento operacional.
-
-> **Escopo desta entrega:** este repositório documenta o ambiente
-> Windows Server configurado e a página demonstrativa publicada no IIS.
-> A página atualmente hospedada é um front-end estático em HTML, sem
-> integração com o backend, banco de dados ou aplicativo mobile
-> original.
 
 ## 1. Objetivos
 
@@ -44,6 +50,11 @@ O servidor foi configurado como o primeiro controlador de domínio de uma
 nova floresta `bridge.local`, com os níveis funcionais de floresta e
 domínio definidos como Windows Server 2016.
 
+<img src="images/1.png"/>
+
+<img src="images/2.png"/>
+
+
 ## 3. Serviços e configurações
 
 ### 3.1 Rede e identidade
@@ -63,6 +74,18 @@ domínio definidos como Windows Server 2016.
 **Validações realizadas:** resolução do nome `BRIDGE-SRV.bridge.local`,
 resolução reversa do IP `192.168.18.250` e resolução de nome externo
 (`google.com`) utilizando o DNS do servidor.
+
+<img src="images/3.png"/>
+
+<img src="images/4.png"/>
+
+<img src="images/5.png"/>
+
+<img src="images/6.png"/>
+
+<img src="images/7.png"/>
+
+<img src="images/8.png"/>
 
 ### 3.2 Hospedagem web com IIS
 
@@ -85,8 +108,13 @@ servindo a página por HTTP.
 
 **Sobre a página:** trata-se de uma demonstração estática em HTML, CSS e
 JavaScript. Os dados exibidos são demonstrativos e as interações
-acontecem no navegador. Não há persistência em banco de dados nem
-comunicação com uma API nesta versão hospedada.
+acontecem no navegador.
+
+<img src="images/9.png"/>
+
+<img src="images/10.png"/>
+
+<img src="images/11.png"/>
 
 ### 3.3 Permissões NTFS
 
@@ -102,6 +130,8 @@ janela **Advanced Security Settings**.
 
 Essa configuração permite que o processo do IIS leia e execute o
 conteúdo publicado, sem conceder a ele controle total sobre a pasta.
+
+<img src="images/12.png"/>
 
 ### 3.4 Monitoramento de recursos
 
@@ -220,9 +250,6 @@ BRIDGE/
     └── 13-logs-iis.png
 ```
 
-Ajuste os nomes conforme os arquivos realmente adicionados. Não inclua
-evidências de configurações que não foram executadas.
-
 ## 6. Limitações e próximos passos
 
 A infraestrutura demonstrada atende à configuração de rede e identidade,
@@ -240,8 +267,13 @@ Os seguintes itens não estão demonstrados como concluídos nesta versão:
 -   Teste controlado de falha e comprovação da recuperação após a falha.
 -   Implementação de File Server, GPO, RDS e DFS.
 
-Esses itens devem ser implementados e documentados somente se fizerem
-parte do escopo final exigido pela equipe ou pelo professor.
+<img src="images/13.png"/>
+
+<img src="images/14.png"/>
+
+<img src="images/15.png"/>
+
+<img src="images/16.png"/>
 
 ## 7. Conclusão
 
